@@ -1,0 +1,11 @@
+
+modLoader="neoforge"
+loaderVersion="*"
+license="MIT"
+
+[[mods]]
+modId="examplemod"
+version="0.1.0"
+displayName="Example Mod"
+authors="YourName"
+description='''Multi-loader example (NeoForge).'''

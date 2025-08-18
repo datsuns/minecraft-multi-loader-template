@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "examplemod",
+  "version": "0.1.0",
+  "name": "Example Mod",
+  "description": "Multi-loader example (Fabric).",
+  "authors": [
+    "YourName"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.mymod.fabric.MyModFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0",
+    "minecraft": ">=1.21.1",
+    "fabric-api": "*"
+  }
+}
