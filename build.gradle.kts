@@ -1,3 +1,7 @@
+plugins {
+  idea
+}
+
 
 allprojects {
   repositories {
@@ -11,4 +15,9 @@ allprojects {
   plugins.withType<JavaPlugin> {
     the<JavaPluginExtension>().toolchain.languageVersion.set(JavaLanguageVersion.of( (findProperty("java_version") as String).toInt() ))
   }
+}
+
+
+subprojects {
+  apply(plugin = "idea")
 }
