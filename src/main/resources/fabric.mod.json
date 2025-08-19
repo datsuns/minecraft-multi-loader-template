@@ -15,12 +15,12 @@
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
-		]
+                "main": [
+                        "com.example.fabric.ExampleModFabric"
+                ],
+                "client": [
+                        "com.example.fabric.ExampleModFabricClient"
+                ]
 	},
 	"mixins": [
 		"modid.mixins.json",
