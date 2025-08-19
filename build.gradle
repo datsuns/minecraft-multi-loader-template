@@ -81,6 +81,27 @@ tasks.named("sourcesJar") {
         exclude "net/minecraftforge/**"
 }
 
+// Build a jar for Forge that excludes Fabric-specific metadata
+tasks.register("forgeJar", Jar) {
+        archiveClassifier.set("forge")
+        from sourceSets.main.output
+        from sourceSets.client.output
+
+        // Reuse license handling from the main jar
+        inputs.property "archivesName", project.base.archivesName
+        from("LICENSE") {
+                rename { "${it}_${inputs.properties.archivesName}" }
+        }
+
+        // Remove Fabric metadata from the Forge jar
+        exclude "fabric.mod.json"
+        exclude "net/minecraftforge/**"
+}
+
+tasks.named("build") {
+        dependsOn tasks.named("forgeJar")
+}
+
 // configure the maven publication
 publishing {
 	publications {
