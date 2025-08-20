@@ -1,41 +1,25 @@
 {
-	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
-	"entrypoints": {
-                "main": [
-                        "com.example.fabric.ExampleModFabric"
-                ],
-                "client": [
-                        "com.example.fabric.ExampleModFabricClient"
-                ]
-	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.8",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "multiloader",
+  "version": "1.0.0",
+  "name": "MultiLoader Example Mod",
+  "description": "A Minecraft mod template starting with Fabric, extendable to other loaders.",
+  "authors": ["YourName"],
+  "contact": {
+    "homepage": "https://example.com",
+    "sources": "https://github.com/example/multi-loader-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/multiloader/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.multiloader.MultiLoaderMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "1.21.8",
+    "java": ">=21"
+  }
 }
