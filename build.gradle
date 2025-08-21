@@ -28,19 +28,3 @@ java {
     withSourcesJar()
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-    runs {
-        client {
-            client()
-            name "Fabric Client"
-            source sourceSets.main
-        }
-        server {
-            server()
-            name "Fabric Server"
-            source sourceSets.main
-        }
-    }
-}
