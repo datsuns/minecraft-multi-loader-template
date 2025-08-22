@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "multiloader",
-  "version": "1.0.0",
-  "name": "MultiLoader Example Mod",
-  "description": "A Minecraft mod template starting with Fabric, extendable to other loaders.",
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
   "authors": ["YourName"],
   "contact": {
     "homepage": "https://example.com",
     "sources": "https://github.com/example/multi-loader-mod"
   },
   "license": "MIT",
-  "icon": "assets/multiloader/icon.png",
+  "icon": "assets/${mod_id}/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.multiloader.MultiLoaderMod"
+      "com.example.${mod_id}.MultiLoaderMod"
     ]
   },
   "depends": {
-    "fabricloader": ">=0.16.9",
-    "minecraft": "1.21.8",
-    "java": ">=21"
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}"
   }
 }

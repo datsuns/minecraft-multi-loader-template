@@ -32,3 +32,18 @@ java {
     withSourcesJar()
 }
 
+// json中のプレースホルダを置換する
+processResources {
+    inputs.properties(
+            "mod_id": project.property("mod_id"),
+            "mod_name": project.property("mod_name"),
+            "mod_version": project.property("mod_version"),
+            "mod_description": project.property("mod_description"),
+            "fabric_loader_version": project.property("fabric_loader_version"),
+            "minecraft_version": project.property("minecraft_version"),
+            "java_version": project.property("java_version")
+    )
+    filesMatching("fabric.mod.json") {
+        expand(inputs.properties)
+    }
+}
