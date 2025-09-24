@@ -1,0 +1,27 @@
+plugins {
+    id 'net.neoforged.gradle' version "${neo_gradle_version}"
+}
+
+evaluationDependsOn(':common')
+
+neoForge {
+    version = neoforge_version
+
+    runs {
+        client {}
+        server {}
+        data {}
+    }
+}
+
+dependencies {
+    implementation project(":common")
+}
+
+processResources {
+    inputs.property "version", project.version
+}
+
+tasks.named('jar') {
+    from(project(":common").sourceSets.main.output)
+}
