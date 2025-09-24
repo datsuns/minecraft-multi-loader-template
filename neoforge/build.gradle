@@ -16,6 +16,7 @@ neoForge {
 
 dependencies {
     implementation project(":common")
+    implementation "net.neoforged:neoforge:${neoforge_version}"
 }
 
 processResources {
